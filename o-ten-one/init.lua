@@ -24,7 +24,8 @@ The font used in this splash is "Handy Andy" by www.andrzejgdula.com]]
 }
 
 local current_module = (...):gsub("%.init$", "")
-local current_folder = current_module:gsub("%.", "/")
+-- local current_folder = current_module:gsub("%.", "/")
+local current_folder = 'wesnoth/client/shared/lib/splashes/o-ten-one'
 
 local timer = require(current_module .. ".timer")
 
@@ -83,9 +84,9 @@ function splashlib.new(init)
 
       batch:clear()
 
-      if batch:getBufferSize() < batch_w * batch_h then
-        batch:setBufferSize(batch_w * batch_h)
-      end
+      -- if batch:getBufferSize() < batch_w * batch_h then
+      --   batch:setBufferSize(batch_w * batch_h)
+      -- end
 
       for i = 0, batch_h - 1 do
         for j = 0, batch_w - 1 do
